@@ -73,12 +73,12 @@ The component also intakes grid size (in ft) and iteration to adjust the refinem
 Color Map of Social Distance
 
 
-
-<p id="gdcalert8" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image8.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert9">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
 ![alt_text](https://github.com/yx940702/SidewalkAnalysisCOVID19/blob/025b02a216f2a89e4f6a3b7c52a204e4eeea1120/images/problem.png)
 
 Problem Areas
 
 This calculation is visualized in color and mapped onto a mesh that represents the sidewalk. Green (0,255,0) represents areas where people’s distances are exactly at the desired distance. The higher the r value is in the color, the less distance people have than the desirable distance in an area. The higher the blue value is in the color, the more distance people have than the desirable distance in an area. The distance data is mapped onto the domain (0, 2*desired distance).  Areas where social distancing is less possible are recorded in collision and represented by colored mesh in the Problem Area. 
+
+**Conclusion**
+
+This plugin is designed to be compartmentalized, allowing users to pick and choose different components in different circumstances. The compartmentalization also offers further expansion into other usage in spatial analysis, eases troubleshooting, and lower crash risk. The visualization can aid architects and urban designers to choose building locations, density, size of sidewalk and pocket plaza, circulation pattern, entrance location, loading dock location, and so on.
