@@ -53,7 +53,7 @@ The buildings on a target Block are calculated for their volumes to estimate tot
 
 An affecting radius (r) is used to circumscribe a surrounding environment of a given Block. This environment includes nearby buildings, subway stops (optional), interest points (optional) within the radius. Each item in this environment is given a probability inversely proportional to its distance (d) to the target Block with the linear function (r-d)/r to represent the decreasing probability of a person at an item to use the sidewalk as the person is further away.
 
-The occupants in the buildings on a Block and its surrounding blocks are then overlaid with corresponding percentages, which represent the percentages of occupants are likely to be on a sidewalk segment at a given time.
+The occupants in the buildings on a Block and its surrounding blocks are then overlaid with corresponding percentages, which represent the percentages of occupants are likely to be on a sidewalk segment at a given time. These percentages can be changed to reflect different time of the day: they might be very high at peak hours and low throughout the day.
 
 The pedestrian count is estimated with all the data calculated above with a simple statistical model that could be changed easily in the future.
 
@@ -65,7 +65,7 @@ The data pertinent to the target Blocks such as pedestrian count, blocks curves,
 ![alt_text](https://github.com/yx940702/SidewalkAnalysisCOVID19/blob/025b02a216f2a89e4f6a3b7c52a204e4eeea1120/images/socialdistance.png)
 
 
-This component uses the sidewalk surfaces and pedestrian count to calculate distances between randomized points on a given sidewalk segment. The randomization can be polynomially weighted according to given attraction points such as subway stops and interest points to represent the increased likelihood of a person at a part of the sidewalk closer to the attraction points. In comparison to circle packing, this randomization method is a better representation of people on the sidewalk since people are not maximizing effort to distance from each other at a given distance as they would be in circle packing.
+This component uses the sidewalk surfaces and pedestrian count to calculate distances between randomized points on a given sidewalk segment. The randomization can be polynomially weighted according to given attraction points such as subway stops and interest points to represent the increased likelihood of a person at a part of the sidewalk closer to the attraction points. In comparison to circle packing, this randomization method is a better representation of people on the sidewalk since people are not maximizing effort to distance from each other at a given distance as they would be in circle packing. The pedestrian count can be manually input for special circumstances such as events.
 
 The component also intakes grid size (in ft) and iteration to adjust the refinement of the calculation , allowing users to choose on a spectrum between a draft quality (faster and less accurate) and a presentation quality (slower and more accurate) calculation.
 
