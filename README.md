@@ -1,11 +1,7 @@
 # Grasshopper Plugin COVID19 for Sidewalk Analysis
 
+![alt text](https://github.com/yx940702/SidewalkAnalysisCOVID19/blob/main/images/logo.png?raw=true)
 
-
-<p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image1.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image1.png "image_tooltip")
 
 
 **Research Question**
@@ -21,11 +17,7 @@ I worked out a working structure with native grasshopper components and then scr
 **Component: Parse Data in Rhino Model**
 
 
-
-<p id="gdcalert2" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image2.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image2.png "image_tooltip")
+![alt_text](https://github.com/yx940702/SidewalkAnalysisCOVID19/blob/025b02a216f2a89e4f6a3b7c52a204e4eeea1120/images/parsedata.png)
 
 
 To provide a data structure, the model is parsed based on city blocks. Curves from Layer _Linework:Pavement Edge_ are used instead of _Linework:Sidewalk _because they include pocket plazas and other pedestrian areas that are not included in _Sidewalk. _These curves are joined to make Blocks.
@@ -37,11 +29,7 @@ Lot Line curves from layer _Linework:Lot Lines_  are also taken in to provide a 
 **Component: Pedestrian Traffic Volume Analysis**
 
 
-
-<p id="gdcalert3" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image3.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert4">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image3.png "image_tooltip")
+![alt_text](https://github.com/yx940702/SidewalkAnalysisCOVID19/blob/025b02a216f2a89e4f6a3b7c52a204e4eeea1120/images/Pedestrian%20traffic.png)
 
 
 The parsed model from the first component is plugged into corresponding parameter inputs on this component.
@@ -51,21 +39,13 @@ To lighten the computation, not all parsed data from the first component are ana
 The Blocks and Lot Lines are used to create a sidewalk surface. This is the best approximation of a sidewalk surface segment given the model. Looking through Google Maps in Satellite View and Street View, I found out that the building footprints do not estimate the sidewalk boundaries well because there are fences and other data not included in the footprints.
 
 
-
-<p id="gdcalert4" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image4.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert5">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image4.png "image_tooltip")
+![alt_text](https://github.com/yx940702/SidewalkAnalysisCOVID19/blob/025b02a216f2a89e4f6a3b7c52a204e4eeea1120/images/targetbuilding.png)
 
 
 The buildings on a target Block are calculated for their volumes to estimate total floor area by dividing volumes with average floor heights. This floor area is then used to estimate the number of occupants on the Block by dividing it with average square footage per occupants.
 
 
-
-<p id="gdcalert5" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image5.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert6">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image5.png "image_tooltip")
+![alt_text](https://github.com/yx940702/SidewalkAnalysisCOVID19/blob/025b02a216f2a89e4f6a3b7c52a204e4eeea1120/images/radius.png)
 
 
 An affecting radius (r) is used to circumscribe a surrounding environment of a given Block. This environment includes nearby buildings, subway stops (optional), interest points (optional) within the radius. Each item in this environment is given a probability inversely proportional to its distance (d) to the target Block with the linear function (r-d)/r to represent the decreasing probability of a person at an item to use the sidewalk as the person is further away.
@@ -79,11 +59,7 @@ The data pertinent to the target Blocks such as pedestrian count, blocks curves,
 **Component: Social Distance Analysis**
 
 
-
-<p id="gdcalert6" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image6.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert7">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image6.png "image_tooltip")
+![alt_text](https://github.com/yx940702/SidewalkAnalysisCOVID19/blob/025b02a216f2a89e4f6a3b7c52a204e4eeea1120/images/socialdistance.png)
 
 
 This component uses the sidewalk surfaces and pedestrian count to calculate distances between randomized points on a given sidewalk segment. The randomization can be polynomially weighted according to given attraction points such as subway stops and interest points to represent the increased likelihood of a person at a part of the sidewalk closer to the attraction points. In comparison to circle packing, this randomization method is a better representation of people on the sidewalk since people are not maximizing effort to distance from each other at a given distance as they would be in circle packing.
@@ -92,11 +68,7 @@ The component also intakes grid size (in ft) and iteration to adjust the refinem
 
 
 
-<p id="gdcalert7" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image7.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert8">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image7.png "image_tooltip")
-
+![alt_text](https://github.com/yx940702/SidewalkAnalysisCOVID19/blob/025b02a216f2a89e4f6a3b7c52a204e4eeea1120/images/colormesh.png)
 
 Color Map of Social Distance
 
@@ -105,8 +77,7 @@ Color Map of Social Distance
 <p id="gdcalert8" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image8.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert9">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
-![alt_text](images/image8.png "image_tooltip")
-
+![alt_text](https://github.com/yx940702/SidewalkAnalysisCOVID19/blob/025b02a216f2a89e4f6a3b7c52a204e4eeea1120/images/problem.png)
 
 Problem Areas
 
