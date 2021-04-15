@@ -12,6 +12,9 @@ There are several 3 intertwined core problems to solve: giving the model a data 
 
 **Workflow**
 
+![alt_text](https://github.com/yx940702/SidewalkAnalysisCOVID19/blob/98f6454a74ec3f168011e42f87cd10fde2ef6c79/images/icons.png)
+
+
 I worked out a working structure with native grasshopper components and then scripted in c# inside grasshopper, which allowed me to prototype and troubleshoot quickly. Then, I scripted the components in Visual Studio to produce the finished product.
 
 **Component: Parse Data in Rhino Model**
@@ -69,13 +72,14 @@ The component also intakes grid size (in ft) and iteration to adjust the refinem
 
 
 ![alt_text](https://github.com/yx940702/SidewalkAnalysisCOVID19/blob/025b02a216f2a89e4f6a3b7c52a204e4eeea1120/images/colormesh.png)
-
 Color Map of Social Distance
 
 
-![alt_text](https://github.com/yx940702/SidewalkAnalysisCOVID19/blob/025b02a216f2a89e4f6a3b7c52a204e4eeea1120/images/problem.png)
 
+![alt_text](https://github.com/yx940702/SidewalkAnalysisCOVID19/blob/025b02a216f2a89e4f6a3b7c52a204e4eeea1120/images/problem.png)
 Problem Areas
+
+
 
 This calculation is visualized in color and mapped onto a mesh that represents the sidewalk. Green (0,255,0) represents areas where people’s distances are exactly at the desired distance. The higher the r value is in the color, the less distance people have than the desirable distance in an area. The higher the blue value is in the color, the more distance people have than the desirable distance in an area. The distance data is mapped onto the domain (0, 2*desired distance).  Areas where social distancing is less possible are recorded in collision and represented by colored mesh in the Problem Area. 
 
