@@ -6,7 +6,7 @@
 
 **Research Question**
 
-The goal of this plugin is to allow users to use an unmodified Rhino model from New York City’s Department of City Planning to evaluate sidewalk segments social distancing. Instead of providing an extremely accurate statistical model to estimate pedestrian traffic, the goal of this plugin is to provide a prototype with a reasonable approximation model, which the approximation model could be switched out easily upon further studies.
+The goal of this plugin is to allow users to use an unmodified Rhino model from New York City’s Department of City Planning to evaluate sidewalk segments social distancing. Instead of providing an extremely accurate statistical model to estimate pedestrian traffic, the goal of this plugin is to provide a prototype with a reasonable approximation model, which could be switched out easily upon further studies.
 
 There are several 3 intertwined core problems to solve: giving the model a data structure, estimating pedestrian count, and evaluating sidewalk segments. Answering these three problems provided the structure of the 3 components in this plugin.
 
