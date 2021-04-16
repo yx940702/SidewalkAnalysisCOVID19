@@ -41,15 +41,10 @@ To lighten the computation, not all parsed data from the first component are ana
 
 The Blocks and Lot Lines are used to create a sidewalk surface. This is the best approximation of a sidewalk surface segment given the model. Looking through Google Maps in Satellite View and Street View, I found out that the building footprints do not estimate the sidewalk boundaries well because there are fences and other data not included in the footprints.
 
-
-![alt_text](https://github.com/yx940702/SidewalkAnalysisCOVID19/blob/35e914ddbe91049079b1b90424e9f28f4ed354cf/images/target1.png)
+![alt_text](https://github.com/yx940702/SidewalkAnalysisCOVID19/blob/19e3c37ea6c9f2b4f24654c84d52bd7d7139a751/images/searching.gif)
 
 
 The buildings on a target Block are calculated for their volumes to estimate total floor area by dividing volumes with average floor heights. This floor area is then used to estimate the number of occupants on the Block by dividing it with average square footage per occupants.
-
-
-![alt_text](https://github.com/yx940702/SidewalkAnalysisCOVID19/blob/19e3c37ea6c9f2b4f24654c84d52bd7d7139a751/images/searching.gif)
-
 
 An affecting radius (r) is used to circumscribe a surrounding environment of a given Block. This environment includes nearby buildings, subway stops (optional), interest points (optional) within the radius. Each item in this environment is given a probability inversely proportional to its distance (d) to the target Block with the linear function (r-d)/r to represent the decreasing probability of a person at an item to use the sidewalk as the person is further away.
 
