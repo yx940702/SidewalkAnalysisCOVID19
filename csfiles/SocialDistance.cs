@@ -309,6 +309,7 @@ namespace SidewalkCOVID19
                 var attracts = new Point3dList(attractors);
                 var rnd = new Random();
                 var bbox = brep.GetBoundingBox(true);
+                attractor_strength = (-1) * attractor_strength;
 
                 for (int i = 0; i < num; i++)
                 {
