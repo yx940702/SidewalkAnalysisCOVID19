@@ -1,6 +1,6 @@
 # Grasshopper Plugin COVID19 for Sidewalk Analysis
 
-![alt text](https://github.com/yx940702/SidewalkAnalysisCOVID19/blob/b34826609ac18cfa98e02fb91bbf87f6c72cd2a9/images/analysis.png)
+![alt text](https://github.com/yx940702/SidewalkAnalysisCOVID19/blob/1df3e75ee075fe19175e9c6804a39df0fcdfd63f/images/analysis.png)
 
 
 
@@ -66,12 +66,12 @@ The component also intakes grid size (in ft) and iteration to adjust the refinem
 
 
 
-![alt_text](https://github.com/yx940702/SidewalkAnalysisCOVID19/blob/b34826609ac18cfa98e02fb91bbf87f6c72cd2a9/images/analysisresult.png)
+![alt_text](https://github.com/yx940702/SidewalkAnalysisCOVID19/blob/1df3e75ee075fe19175e9c6804a39df0fcdfd63f/images/analysisresult.png)
 Color Map of Social Distance
 
 
 
-![alt_text](https://github.com/yx940702/SidewalkAnalysisCOVID19/blob/b34826609ac18cfa98e02fb91bbf87f6c72cd2a9/images/problem.png)
+![alt_text](https://github.com/yx940702/SidewalkAnalysisCOVID19/blob/1df3e75ee075fe19175e9c6804a39df0fcdfd63f/images/problem.png)
 Problem Areas
 
 
